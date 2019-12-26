@@ -1,0 +1,64 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>WP lab - Confirmation Info</title>
+    <style type="text/css">
+        body {
+            width: 800px;
+            margin: auto;
+        }
+        table {
+            width:100%;
+        }
+        table, td, th {
+            border: 1px solid black;
+            padding: 3px 2px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <header>
+        <h1>Pizza Order page - Order confirmation </h1>
+    </header>
+    <table>
+        <tr>
+            <th colspan="2">
+                Your Order Status
+            </th>
+        </tr>
+        <tr>
+            <td><b>Client Name </b></td>
+            <td th:text="${clientName}">Petko Petkov</td>
+        </tr>
+        <tr>
+            <td><b>Client Address </b></td>
+            <td th:text="${clientAddress}">Partizanska 5, Skopje</td>
+        </tr>
+        <tr>
+            <td><b>Client IP Address</b></td>
+            <td th:text="${clientIP}">127.0.0.1</td>
+        </tr>
+        <tr>
+            <td><b>Client Browser</b></td>
+            <td th:text="${clientBrowser}">Mozilla</td>
+        </tr>
+        <tr>
+            <td><b>Pizza Type </b></td>
+            <td th:text="${pizzaName}">Margarita</td>
+        </tr>
+        <tr>
+            <td><b>Pizza Size </b></td>
+            <td th:text="${pizzaSize}">Large</td>
+        </tr>
+        <tr>
+            <td><b>Order Id </b></td>
+            <td th:text="${orderId}">Large</td>
+        </tr>
+    </table>
+    <div>
+        <a href="/logout">Log out</a>
+    </div>
+</section>
+</body>
+</html>
